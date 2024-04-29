@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 1100px) {
+            body {
+                display: none;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 26px;
+        }
+
+        P {
+            margin: 15px;
+        }
+
+        ul {
+            margin: -10px;
+            padding: 0px 50px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        #main {
+            background-color: white;
+            opacity: 0.99;
+
+            width: 1700px;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100px auto 50px;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        #centeringContainer {
+            display: flex;
+            justify-content: center;
+
+            max-height: 95vh;
+
+        }
+
+        .topContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 50px;
+            background-color: white;
+            width: 100%;
+            height: 100px;
+
+            grid-row: 1;
+        }
+
+        .topInfo {
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 50px auto 50px;
+            grid-template-rows: 100%;
+
+            padding: 3px 50px;
+        }
+
+        .topInfoText {
+            grid-row: 1;
+            grid-column: 2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+        }
+
+        .topMenu {
+            grid-row: 2;
+            grid-column: 1;
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 100%;
+        }
+
+        .topMenuElement {
+            width: 100%;
+            height: 100%;
+            border-top: 3px solid blue;
+            border-left: 3px solid blue;
+            border-bottom: 3px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .topMenuElement:last-child {
+            border-right: 3px solid blue;
+        }
+
+        .topMenuElement:hover {
+            background-color: lightpink;
+            cursor: pointer;
+        }
+
+        .link {
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .midContainer {
+            grid-row: 2;
+            width: 100%;
+            padding: 25px;
+
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 25px;
+
+            
+        }
+
+        .midHeader {
+            grid-row: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        
+        .midHeaderText {
+
+            padding: 5px;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+        }
+
+        .midListContainer {
+            grid-row: 2;
+            
+
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px 300px;
+
+            row-gap: 25px;
+
+            justify-content: space-between;
+        }
+
+        .midListItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+        }
+
+        .midListItemText {
+            width: 100%;
+            margin: 3px;
+            text-align: center;
+            font-size: 22px;
+
+            border-radius: 10px;
+
+            background-color: #f1f2f6;
+        }
+
+        .bottomContainer {
+            grid-row: 3;
+
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            grid-template-rows: 100%;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            border: 3px solid blue;
+
+        }
+
+        .bottomElement {
+            width: 100%;
+            height: 100%;
+            grid-column: 2;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        .logo {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        #pedroContainer {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        #pedro {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cathedraLink {
+            margin: 0 20px;
+            padding: 0 15px;
+            border: 3px solid #a4b0be;
+            border-radius: 20px;
+            color:#a4b0be;
+            cursor:pointer;
+            transition: 0.5s;
+        }
+
+        .cathedraLink:hover {
+            background-color: #a4b0be;
+            color:#dfe4ea;
+            border: 3px solid #dfe4ea;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/Assets/Loop.mp4" type="video/mp4">
+    </video>
+
+    <div id="centeringContainer">
+        <div id="main">
+
+            <div class="topContainer">
+                <div class="topInfo">
+                    <a class="logo" href="./index.html">
+                        <div id="pedroContainer">
+                            <video autoplay muted loop id="pedro">
+                                <source src="/Assets/pedro.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
+                    <div class="topInfoText">
+                        <p>Система адаптации новых аболтусов УдГУ</p>
+                    </div>
+                </div>
+                <div class="topMenu">
+                    <a class="topMenuElement" href="./Guide.html">
+                        <p class="link">Путеводитель</p>
+                    </a>
+                    <a class="topMenuElement" href="./Cathedras.html">
+                        <p class="link">Кафедры</p>
+                    </a>
+                    <a class="topMenuElement" href="./Activities.html">
+                        <p class="link">Внеучебная деятельность</p>
+                    </a>
+                    <a class="topMenuElement" href="./Ecosystem.html">
+                        <p class="link">Экосистема УдГУ</p>
+                    </a>
+                    <a class="topMenuElement" href="./General.html">
+                        <p class="link">Общее</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="midContainer">
+
+                <div class="midHeader">
+                    <a class="cathedraLink" href="./Cathedra1.html">Предыдущая</a>
+                    <p class="midHeaderText">Кафедра финансов и цифровой экономики</p>
+                    <a class="cathedraLink" href="./Cathedra3.html">Следующая</a>
+                </div>
+
+                <div class="midListContainer">
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Суетин Александр Николаевич</p>
+                        <p class="midListItemText">🌟 зав. кафедрой</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                        <p class="midListItemText">ANSUETIN.udgu@gmail.com</p>
+                        <p class="midListItemText">📞 8(3412)916-058</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Борнякова Елена Васильевна</p>
+                        <p class="midListItemText">💼 старший преподаватель</p>
+                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                        <p class="midListItemText">📧 evb2006@mail.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-058</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Костенкова Вера Григорьевна</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                        <p class="midListItemText">📧 vgk971@yandex.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-058</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Слесаренко Галина Витальевна</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                        <p class="midListItemText">📧 sgv06@list.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-058</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Тимирханова Люция Мукатдамовна</p>
+                        <p class="midListItemText">💼 старший преподаватель</p>
+                        <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
+                        <p class="midListItemText">📧 luciatm@yandex.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-203</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Федулова Светлана Федоровна</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                        <p class="midListItemText">📧 fsffin@yandex.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-058</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
+                        <p class="midListItemText">ir.scherbackova@yandex.ru</p>
+                        <p class="midListItemText">📞 8(3412)916-203</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Матвеева Инна Витальевна</p>
+                        <p class="midListItemText">💼 к.э.н., доцент</p>
+                        <p class="midListItemText">inna.matweewa@gmail.com</p>
+                    </div>
+
+                    <div class="midListItem">
+                        <img src="/Assets/person.svg" width="100px">
+                        <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
+                        <p class="midListItemText">💼 старший преподаватель</p>
+                        <p class="midListItemText">🏢 4 корпус, 415 каб.</p>
+                        <p class="midListItemText">📧 tga433@yandex.ru</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="bottomContainer">
+
+                <div class="bottomElement">
+                    <p>Marina Kopysova Team © 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener(`DOMContentLoaded`, () => {
+            // Get the value of `devicePixelRatio`
+            const dpr = window.devicePixelRatio;
+            // If the value is 1, return early
+            if (dpr === 1) {
+                return;
+            }
+            // Define the base zoom
+            const baseZoom = 1;
+
+            // Calculate the zoom scaling
+            const zoom = baseZoom / dpr;
+
+            // Create a style element
+            const styleElement = document.createElement(`style`);
+
+            // Add CSS rule to the style element
+            styleElement.innerHTML = `
+                @media (-webkit-device-pixel-ratio: ${dpr}) {
+                :root {
+                zoom: ${zoom};
+                }
+                }
+                `;
+
+            // Add the style element to the document
+            document.head.appendChild(styleElement);
+        });
+    </script>
+</body>
+
+</html>
