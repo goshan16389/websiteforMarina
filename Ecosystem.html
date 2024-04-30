@@ -1,197 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Экосистема УдГУ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <style>
-
-        
-
-        * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        P {
-            margin: 0;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-
-            background-color: #a4b0be;
-        }
-
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-
-        #main {
-            background-color: white;
-            opacity: 0.8;
-
-            width: 1100px;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 100px auto 50px;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-        }
-
-        #centeringContainer {
-            display: flex;
-            justify-content: center;
-
-            max-height: 95vh;
-
-        }
-
-        .topContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 50px 50px;
-            background-color: white;
-            width: 100%;
-            height: 100px;
-
-            grid-row: 1;
-        }
-
-        .topInfo {
-            grid-column: 1;
-            grid-row: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 50px auto 50px;
-            grid-template-rows: 100%;
-
-            padding: 3px 50px;
-        }
-
-        .topInfoText {
-            grid-row: 1;
-            grid-column: 2;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-        }
-
-        .topMenu {
-            grid-row: 2;
-            grid-column: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 100%;
-        }
-
-        .topMenuElement {
-            width: 100%;
-            height: 100%;
-            border-top: 3px solid blue;
-            border-left: 3px solid blue;
-            border-bottom: 3px solid blue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .topMenuElement:last-child {
-            border-right: 3px solid blue;
-        }
-
-        .topMenuElement:hover {
-            background-color: lightpink;
-            cursor: pointer;
-        }
-
-        .link {
-            text-align: center;
-            width: 100%;
-            position: relative;
-        }
-
 
         .midContainer {
             grid-row: 2;
             width: 100%;
-            background-color: bisque;
-            padding: 10px;
-        }
-
-        .bottomContainer {
-            grid-row: 3;
-
-            display: grid;
-            grid-template-columns: 100px auto 100px;
-            grid-template-rows: 100%;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-            border: 3px solid blue;
-
-        }
-
-        .bottomElement {
-            width: 100%;
-            height: 100%;
-            grid-column: 2;
+            height: 725px;
 
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
-        a {
-            text-decoration: none;
+        .swiper {
+            padding: 25px;
         }
 
-        a:visited {
-            color: black;
-        }
-
-        .logo {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        #pedroContainer {
+        .midSliderContainer {
             width: 100%;
             height: 100%;
-            border-radius: 15px;
+
+            display: grid;
+            grid-template-columns: 200px 250px 1150px;
+            grid-template-rows: 250px 375px;
+            gap: 25px;
+        }
+
+        .midLeft {
+            grid-column: span 2;
+            grid-row: span 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
+            Padding: 5px;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            background-color: #dfe4ea;
+
+        }
+
+        .midRight {
+            grid-column: 3;
+            grid-row: span 2;
+
+            border: 3px solid #a4b0be;
+            border-radius: 10px;
+
             overflow: hidden;
+
+            box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+            position: relative;
+            text-align: left;
         }
 
-        #pedro {
-            width: 100%;
-            height: 100%;
-        }
-
-        
     </style>
 </head>
 
 <body>
-    
+
 
     <div id="centeringContainer">
         <div id="main">
@@ -206,7 +82,7 @@
                         </div>
                     </a>
                     <div class="topInfoText">
-                        <p>Система адаптации новых аболтусов УдГУ</p>
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
                     </div>
                 </div>
                 <div class="topMenu">
@@ -219,7 +95,7 @@
                     <a class="topMenuElement" href="./Activities.html">
                         <p class="link">Внеучебная деятельность</p>
                     </a>
-                    <a class="topMenuElement" href="./Ecosystem.html">
+                    <a class="topMenuElement selected" href="./Ecosystem.html">
                         <p class="link">Экосистема УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
@@ -230,6 +106,167 @@
 
             <div class="midContainer">
 
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p>Чтобы посетить какой-либо сайт УдГУ, можно сделать следующие шаги. Ввести
+                                        «дистант»или «дистеду» в поисковой строке и выбрать сайт с эмблемой УдГУ. Для
+                                        входа в личный кабинет, необходимо нажать «вход» и ввести свои данные (логин и
+                                        пароль). Если нажать на значок «i», то можно перейти на: официальный сайт УдГУ,
+                                        ИИАС, журналы УдГУ.</p>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/1screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p>На официальном сайте присутствует общая и основная информация об университете.
+                                        Сайт включает в себя следующую данные:</p>
+                                    <ul>
+                                        <li>Поступление;</li>
+                                        <li>Обучение;</li>
+                                        <li>Наука;</li>
+                                        <li>International;</li>
+                                        <li>Об УдГУ.</li>
+                                    </ul>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/2screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p class="over">Система электронного обучения УдГУ (дистант или дистеду) включает в
+                                        себя предметы
+                                        по институтам.
+                                        С помощью логина (номер штрихкода в студенческом) и пароля (создан в библиотеке
+                                        при регистрации) ты можешь зайти в «личный кабинет» с курсами. «Личный кабинет»
+                                        предоставляет тебе курсы, в которые ты включен по твоей специальности. В каждом
+                                        курсе преподаватель прикрепляет учебный материал (презентации, лекции) и задания
+                                        для студентов, которые в последствие оценивает и выставляет баллы.
+
+                                        Во вкладке «мои курсы» указаны курсы, которые ты прошел за период обучения.
+                                        После прохождения курса, ты сможешь открывать и пользоваться прошлыми
+                                        материалами. </p>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/3screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p class="overmini"> Во вкладке «Начало» ты можешь ознакомиться с институтами УдГУ и
+                                        найти предмет
+                                        курса. Иногда преподаватели не включают тебя в курс, поэтому студентам
+                                        приходится
+                                        самостоятельно на него записываться. Для записи на курс необходимо найти свой
+                                        институт (ИЭиУ),
+                                        далее по перечню кафедр выбрать нужную (например, кафедра экономики), выбрать
+                                        преподавателя предмета (например, Котлячкова Н.В.) , далее выбрать предмет по
+                                        названию и
+                                        записаться на курс. Иногда курс запрашивает кодовое слово (его ты можешь узнать
+                                        у
+                                        преподавателя).</p>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/4screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p>Если нажать на свои инициалы (например, МК) в верхней части сайта, то вам выйдут
+                                        следующие данные:</p>
+                                    <ul>
+                                        <li>О пользователе;</li>
+                                        <li>Оценки;</li>
+                                        <li>Календарь;</li>
+                                        <li>Сообщения (для общения с другими пользователями);</li>
+                                        <li>Личные файлы (здесь можно сохранять свои файлы);</li>
+                                        <li>Отчеты;</li>
+                                        <li>Настройки;</li>
+                                        <li>Язык;</li>
+                                        <li>Выход.</li>
+                                    </ul>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/5screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p class="over">Чтобы зайти в ИИАС необходимо ввести логин и пароль (единые для входа в личный
+                                        кабинет и ИИАС). ИИАС-портал включает в себя следующие данные:</p>
+                                    <ul>
+                                        <li class="overalot">Библиотеку. Предоставляет каталог сайтов, которыми вы можете пользоваться во
+                                            время
+                                            обучения.</li>
+                                        <li class="overalot">Мои данные. Ваши личные данные, которые вы указывали при поступлении в
+                                            университет.
+                                            Так же в подпункте «сменить пароль» вы можете изменить пароль вашего личного
+                                            кабинета и ИИАСа.</li>
+                                        <li class="overalot">Общение.</li>
+                                        <li class="overalot">Портфолио. В него входят ваши внеучебные и учебные работы, публикации,
+                                            оценки по
+                                            предметам, ваш рейтинг среди вашей специальности, практика, которую вы
+                                            проходили.</li>
+                                        <li class="overalot">Студент. Можете ознакомится с вашим учебным планом на весь период обучения,
+                                            узнать
+                                            стоимость вашего обучения (платное) или степендию (бюджет),так же узнать
+                                            ваше
+                                            расписание, рейтинг и оценки.</li>
+                                    </ul>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/6screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="midSliderContainer">
+                                <div class="midLeft">
+                                    <p> Журналы УдГУ включают себя журналы от институтов, в которых публикуются статьи, 
+                                        содержащие оригинальные научные результаты, и обзорные статьи в различных разделах 
+                                        математики, экономики и права, биологии, философии, психологии, социологии, политологии, 
+                                        истории, филологии, многоязычия, фино-угорские исследования.</p>
+                                </div>
+                                <div class="midRight">
+                                    <img src="./Assets/7screen.jpg" height="100%" width="100%">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="midDescription">
+                <button onclick="swiper.slidePrev()">Назад</button>
+                <p>Для навигации делайте свайпы или используйте эти кнопки</p>
+                <button onclick="swiper.slideNext()">Вперёд</button>
             </div>
 
             <div class="bottomContainer">
@@ -241,6 +278,66 @@
 
         </div>
     </div>
+
+    <script>
+        document.addEventListener(`DOMContentLoaded`, () => {
+            // Get the value of `devicePixelRatio`
+            const dpr = window.devicePixelRatio;
+            // If the value is 1, return early
+            if (dpr === 1) {
+                return;
+            }
+            // Define the base zoom
+            const baseZoom = 1;
+
+            // Calculate the zoom scaling
+            const zoom = baseZoom / dpr;
+
+            // Create a style element
+            const styleElement = document.createElement(`style`);
+
+            // Add CSS rule to the style element
+            styleElement.innerHTML = `
+                @media (-webkit-device-pixel-ratio: ${dpr}) {
+                :root {
+                zoom: ${zoom};
+                }
+                }
+                `;
+
+            // Add the style element to the document
+            document.head.appendChild(styleElement);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 100,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            autoplay: {
+                delay: 15000,
+            },
+        });
+    </script>
 </body>
 
 </html>

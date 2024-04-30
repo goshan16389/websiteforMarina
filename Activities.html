@@ -1,191 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Внеучебная деятельность</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
-
-
-        * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        P {
-            margin: 0;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-
-            background-color: #a4b0be;
-        }
-
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-
-        #main {
-            background-color: white;
-            opacity: 0.8;
-
-            width: 1100px;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 100px auto 50px;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-        }
-
-        #centeringContainer {
-            display: flex;
-            justify-content: center;
-
-            max-height: 95vh;
-
-        }
-
-        .topContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 50px 50px;
-            background-color: white;
-            width: 100%;
-            height: 100px;
-
-            grid-row: 1;
-        }
-
-        .topInfo {
-            grid-column: 1;
-            grid-row: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 50px auto 50px;
-            grid-template-rows: 100%;
-
-            padding: 3px 50px;
-        }
-
-        .topInfoText {
-            grid-row: 1;
-            grid-column: 2;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-        }
-
-        .topMenu {
-            grid-row: 2;
-            grid-column: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 100%;
-        }
-
-        .topMenuElement {
-            width: 100%;
-            height: 100%;
-            border-top: 3px solid blue;
-            border-left: 3px solid blue;
-            border-bottom: 3px solid blue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .topMenuElement:last-child {
-            border-right: 3px solid blue;
-        }
-
-        .topMenuElement:hover {
-            background-color: lightpink;
-            cursor: pointer;
-        }
-
-        .link {
-            text-align: center;
-            width: 100%;
-            position: relative;
-        }
-
 
         .midContainer {
             grid-row: 2;
             width: 100%;
-            background-color: bisque;
-            padding: 10px;
-        }
-
-        .bottomContainer {
-            grid-row: 3;
+            padding: 25px;
 
             display: grid;
-            grid-template-columns: 100px auto 100px;
-            grid-template-rows: 100%;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-            border: 3px solid blue;
-
+            grid-template-rows: auto auto;
+            gap: 25px;
         }
 
-        .bottomElement {
-            width: 100%;
-            height: 100%;
-            grid-column: 2;
+        .midListItem img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border: 3px solid #a4b0be;
         }
 
-        a {
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: black;
-        }
-
-        .logo {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        #pedroContainer {
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        #pedro {
-            width: 100%;
-            height: 100%;
-        }
-
-        
     </style>
 </head>
 
@@ -204,7 +44,7 @@
                         </div>
                     </a>
                     <div class="topInfoText">
-                        <p>Система адаптации новых аболтусов УдГУ</p>
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
                     </div>
                 </div>
                 <div class="topMenu">
@@ -214,7 +54,7 @@
                     <a class="topMenuElement" href="./Cathedras.html">
                         <p class="link">Кафедры</p>
                     </a>
-                    <a class="topMenuElement" href="./Activities.html">
+                    <a class="topMenuElement selected" href="./Activities.html">
                         <p class="link">Внеучебная деятельность</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
@@ -228,6 +68,157 @@
 
             <div class="midContainer">
 
+                <div class="midHeader">
+                    <p class="midHeaderText">Список клубов УдГУ</p>
+                </div>
+
+                <div class="midListContainerActivities">
+                    <div class="midListItem">
+                        <a href="https://vk.com/volonterudgu" target="_blank">
+                            <img src="/Assets/volonter.jpg">
+                        </a>
+                        <p class="midListItemText">Волонтерский центр</p>
+                        <p class="midListItemText">🌟 Парфенова Виолетта Андреевна</p>
+                        <a class="midListItemText vk" href="https://vk.com/volonterudgu" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/mskudsu" target="_blank">
+                            <img src="/Assets/mskudsu.jpg">
+                        </a>
+                        <p class="midListItemText">Международный Студенческий Клуб (МСК)</p>
+                        <a class="midListItemText vk" href="https://vk.com/mskudsu" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/kasseta_media" target="_blank">
+                            <img src="/Assets/kasseta.jpg">
+                        </a>
+                        <p class="midListItemText">«КАССЕТА MEDIA»</p>
+                        <p class="midListItemText">🌟 Соболева Олеся Дмитриевна</p>
+                        <a class="midListItemText vk" href="https://vk.com/kasseta_media" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/rso_da" target="_blank">
+                            <img src="/Assets/rso.jpg">
+                        </a>
+                        <p class="midListItemText">Экологический клуб</p>
+                        <p class="midListItemText">🌟 Дружакина Ольга Павловна</p>
+                        <a class="midListItemText vk" href="https://vk.com/rso_da" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/teatrmo" target="_blank">
+                            <img src="/Assets/teatr.jpg">
+                        </a>
+                        <p class="midListItemText">«Театр МО»</p>
+                        <p class="midListItemText">🌟 Морозов Максим Сергеевич</p>
+                        <a class="midListItemText vk" href="https://vk.com/teatrmo" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/psih_slugba" target="_blank">
+                            <img src="/Assets/psih.jpg">
+                        </a>
+                        <p class="midListItemText">«π – трансформационные игры»</p>
+                        <p class="midListItemText">🌟 Бурдаева Мария Сергеевна</p>
+                        <a class="midListItemText vk" href="https://vk.com/psih_slugba" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/psih_slugba" target="_blank">
+                            <img src="/Assets/psih.jpg">
+                        </a>
+                        <p class="midListItemText">«Строим счастливую семью»</p>
+                        <p class="midListItemText">🌟 Буркова Татьяна Николаевна</p>
+                        <a class="midListItemText vk" href="https://vk.com/psih_slugba" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/psih_slugba" target="_blank">
+                            <img src="/Assets/psih.jpg">
+                        </a>
+                        <p class="midListItemText">«На здоровье!»</p>
+                        <p class="midListItemText">🌟 Лунегова Вера Константиновна</p>
+                        <a class="midListItemText vk" href="https://vk.com/psih_slugba" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/udgu_dice_magic" target="_blank">
+                            <img src="/Assets/dice.jpg">
+                        </a>
+                        <p class="midListItemText">Клуб настольных игр «Dise & Magic»</p>
+                        <p class="midListItemText">🌟 Коробейников Дмитрий Михайлович</p>
+                        <a class="midListItemText vk" href="https://vk.com/udgu_dice_magic" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/chipchirgan" target="_blank">
+                            <img src="/Assets/chipchirgan.jpg">
+                        </a>
+                        <p class="midListItemText">Фольклорно-этнографический ансамбль «Чипчирган»</p>
+                        <p class="midListItemText">🌟 Пчеловодова Ирина Вячеславовна</p>
+                        <p class="midListItemText">🌟 Леонтьева Лилия Викторовна</p>
+                        <a class="midListItemText vk" href="https://vk.com/chipchirgan" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/sseverdance" target="_blank">
+                            <img src="/Assets/sever.jpg">
+                        </a>
+                        <p class="midListItemText">Творческое объединение «СЕВЕР»</p>
+                        <p class="midListItemText">🌟 Лобастова Александра Александровна</p>
+                        <a class="midListItemText vk" href="https://vk.com/sseverdance" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/yourstageudsu" target="_blank">
+                            <img src="/Assets/stage.jpg">
+                        </a>
+                        <p class="midListItemText">«ТВОЯ СЦЕНА»</p>
+                        <p class="midListItemText">🌟 Смиянов Владимир Владимирович</p>
+                        <a class="midListItemText vk" href="https://vk.com/yourstageudsu" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/midk_udsu1931" target="_blank">
+                            <img src="/Assets/midk.jpg">
+                        </a>
+                        <p class="midListItemText">Молодежный историко–дискуссионный клуб «Платформа»</p>
+                        <p class="midListItemText">🌟 Бегунков Максим Сергеевич</p>
+                        <a class="midListItemText vk" href="https://vk.com/midk_udsu1931" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/cyberfoxudsu" target="_blank">
+                            <img src="/Assets/cyberfox.jpg">
+                        </a>
+                        <p class="midListItemText">Esports community «Cyber Fox»</p>
+                        <p class="midListItemText">🌟 Черепкова Мария Сергеевна</p>
+                        <a class="midListItemText vk" href="https://vk.com/cyberfoxudsu" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/club222395349" target="_blank">
+                            <img src="/Assets/africa.jpg">
+                        </a>
+                        <p class="midListItemText">Клуб африканистики</p>
+                        <p class="midListItemText">🌟 Чермокина Регина Шамиловна</p>
+                        <a class="midListItemText vk" href="https://vk.com/club222395349" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+
+                    <div class="midListItem">
+                        <a href="https://vk.com/kinovideosalon" target="_blank">
+                            <img src="/Assets/videosalon.jpg">
+                        </a>
+                        <p class="midListItemText">Киноклуб «ВИДЕОСАЛОН»</p>
+                        <p class="midListItemText">🌟 Стрелкова Екатерина Владимировна</p>
+                        <a class="midListItemText vk" href="https://vk.com/kinovideosalon" target="_blank">> Группа Вконтакте <</a>
+                    </div>
+                    
+                </div>
+
             </div>
 
             <div class="bottomContainer">
@@ -239,6 +230,37 @@
 
         </div>
     </div>
+
+    <script>
+        document.addEventListener(`DOMContentLoaded`, () => {
+            // Get the value of `devicePixelRatio`
+            const dpr = window.devicePixelRatio;
+            // If the value is 1, return early
+            if (dpr === 1) {
+                return;
+            }
+            // Define the base zoom
+            const baseZoom = 1;
+
+            // Calculate the zoom scaling
+            const zoom = baseZoom / dpr;
+
+            // Create a style element
+            const styleElement = document.createElement(`style`);
+
+            // Add CSS rule to the style element
+            styleElement.innerHTML = `
+                @media (-webkit-device-pixel-ratio: ${dpr}) {
+                :root {
+                zoom: ${zoom};
+                }
+                }
+                `;
+
+            // Add the style element to the document
+            document.head.appendChild(styleElement);
+        });
+    </script>
 </body>
 
 </html>

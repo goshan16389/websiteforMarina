@@ -1,139 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
-        
-
-        * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 26px;
-        }
-
-        P {
-            margin: 15px;
-        }
-
-        ul {
-            margin: -10px;
-            padding: 0px 50px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-
-            background-color: #a4b0be;
-        }
-
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-
-        #main {
-            background-color: white;
-            opacity: 0.99;
-
-            width: 1700px;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 100px auto 50px;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-        }
-
-        #centeringContainer {
-            display: flex;
-            justify-content: center;
-
-            max-height: 95vh;
-
-        }
-
-        .topContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 50px 50px;
-            background-color: white;
-            width: 100%;
-            height: 100px;
-
-            grid-row: 1;
-        }
-
-        .topInfo {
-            grid-column: 1;
-            grid-row: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 50px auto 50px;
-            grid-template-rows: 100%;
-
-            padding: 3px 50px;
-        }
-
-        .topInfoText {
-            grid-row: 1;
-            grid-column: 2;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: large;
-        }
-
-        .topMenu {
-            grid-row: 2;
-            grid-column: 1;
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 100%;
-        }
-
-        .topMenuElement {
-            width: 100%;
-            height: 100%;
-            border-top: 3px solid blue;
-            border-left: 3px solid blue;
-            border-bottom: 3px solid blue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .topMenuElement:last-child {
-            border-right: 3px solid blue;
-        }
-
-        .topMenuElement:hover {
-            background-color: lightpink;
-            cursor: pointer;
-        }
-
-        .link {
-            text-align: center;
-            width: 100%;
-            position: relative;
-        }
-
 
         .midContainer {
             grid-row: 2;
@@ -190,70 +63,6 @@
             text-align: left;
         }
 
-        .overlay-text {
-            position: absolute;
-            color: rgb(255,255,255);
-            bottom: 0px;
-            left: 50%;
-            transform: translate(-50%);
-            background-color: rgba(41, 41, 41, 0.8);
-            padding: 0.5rem;
-            text-align: start;
-            font-size: 16px;
-            width: 100%;
-
-            margin: 0;
-        }
-
-        .bottomContainer {
-            grid-row: 3;
-
-            display: grid;
-            grid-template-columns: 100px auto 100px;
-            grid-template-rows: 100%;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-
-            border: 3px solid blue;
-
-        }
-
-        .bottomElement {
-            width: 100%;
-            height: 100%;
-            grid-column: 2;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: black;
-        }
-
-        .logo {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        #pedroContainer {
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        #pedro {
-            width: 100%;
-            height: 100%;
-        }
-
     </style>
 </head>
 
@@ -273,7 +82,7 @@
                         </div>
                     </a>
                     <div class="topInfoText">
-                        <p>Система адаптации новых аболтусов УдГУ</p>
+                        <p>Система адаптации студентов ИЭиУ первого курса УдГУ</p>
                     </div>
                 </div>
                 <div class="topMenu">
