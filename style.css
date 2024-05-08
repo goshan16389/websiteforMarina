@@ -115,6 +115,7 @@ body {
 .link {
     width: 100%;
     position: relative;
+    text-align: center;
 }
 
 .selected {
@@ -290,8 +291,6 @@ table tr:last-child td:last-child {
 .Content {
     border: 3px solid #a4b0be;
     border-radius: 10px;
-
-    Padding: 5px;
 
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 
