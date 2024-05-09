@@ -492,12 +492,13 @@ table tr:last-child td:last-child {
         margin: 0 25px;
         padding: 5px;
     }
+    body {
+        background-color: white;
+    }
     #main {
         width: 100%;
         min-height: 100vh;
         max-height: 100vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 0.1fr 0.9fr auto 20px 20px;
