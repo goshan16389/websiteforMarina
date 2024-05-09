@@ -465,6 +465,12 @@ table tr:last-child td:last-child {
     transition: 1s;
 }
 
+.vk:link {
+    color: #4834d4;
+
+    transition: 1s;
+}
+
 .vk:visited {
     color: #4834d4;
 }
