@@ -7,7 +7,6 @@
     <title>Кафедра экономической теории и предпринимательства</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-
         .midContainer {
             grid-row: 2;
             width: 100%;
@@ -18,6 +17,14 @@
             gap: 25px;
         }
 
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                padding: 5px;
+                gap: 5px;
+                grid-template-columns: 100%;
+
+            }
+        }
     </style>
 </head>
 
@@ -47,10 +54,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
                         <p class="link">Общее</p>
@@ -69,46 +76,56 @@
                 <div class="midListContainer">
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Радыгина Светлана Владимировна</p>
-                        <p class="midListItemText">🌟 зав. кафедрой</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
-                        <p class="midListItemText">📧 rsv_prepod@mail.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-359</p>
+                        <div>
+                            <p class="midListItemText">Радыгина Светлана Владимировна</p>
+                            <p class="midListItemText">🌟 зав. кафедрой</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
+                            <p class="midListItemText">📧 rsv_prepod@mail.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-359</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Головастова Татьяна Ивановна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
-                        <p class="midListItemText">📧 t_golovastova@mail.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-057</p>
+                        <div>
+                            <p class="midListItemText">Головастова Татьяна Ивановна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
+                            <p class="midListItemText">📧 t_golovastova@mail.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-057</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Гребёнкина Александра Анатольевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
-                        <p class="midListItemText">📧 agrebenkina@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-057</p>
+                        <div>
+                            <p class="midListItemText">Гребёнкина Александра Анатольевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
+                            <p class="midListItemText">📧 agrebenkina@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-057</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Семенова Ирина Александровна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
-                        <p class="midListItemText">📞 8(3412)916-359</p>
+                        <div>
+                            <p class="midListItemText">Семенова Ирина Александровна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 409 каб.</p>
+                            <p class="midListItemText">📞 8(3412)916-359</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Мельникова Мария Сергеевна</p>
-                        <p class="midListItemText">💼 старший преподаватель</p>
+                        <div>
+                            <p class="midListItemText">Мельникова Мария Сергеевна</p>
+                            <p class="midListItemText">💼 старший преподаватель</p>
+                        </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -124,24 +141,25 @@
     </div>
 
     <script>
-        document.addEventListener(`DOMContentLoaded`, () => {
-            // Get the value of `devicePixelRatio`
-            const dpr = window.devicePixelRatio;
-            // If the value is 1, return early
-            if (dpr === 1) {
-                return;
-            }
-            // Define the base zoom
-            const baseZoom = 1;
+        if (window.matchMedia("(min-width: 1000px)").matches) {
+            document.addEventListener(`DOMContentLoaded`, () => {
+                // Get the value of `devicePixelRatio`
+                const dpr = window.devicePixelRatio;
+                // If the value is 1, return early
+                if (dpr === 1) {
+                    return;
+                }
+                // Define the base zoom
+                const baseZoom = 1;
 
-            // Calculate the zoom scaling
-            const zoom = baseZoom / dpr;
+                // Calculate the zoom scaling
+                const zoom = baseZoom / dpr;
 
-            // Create a style element
-            const styleElement = document.createElement(`style`);
+                // Create a style element
+                const styleElement = document.createElement(`style`);
 
-            // Add CSS rule to the style element
-            styleElement.innerHTML = `
+                // Add CSS rule to the style element
+                styleElement.innerHTML = `
                 @media (-webkit-device-pixel-ratio: ${dpr}) {
                 :root {
                 zoom: ${zoom};
@@ -149,9 +167,10 @@
                 }
                 `;
 
-            // Add the style element to the document
-            document.head.appendChild(styleElement);
-        });
+                // Add the style element to the document
+                document.head.appendChild(styleElement);
+            });
+        }
     </script>
 </body>
 

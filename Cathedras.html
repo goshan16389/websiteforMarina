@@ -14,8 +14,28 @@
             padding: 25px;
 
             display: grid;
-            grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             gap: 25px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                padding: 5px;
+
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 205px 205px 205px;
+                gap: 5px;
+            }
+        }
+
+        @media only screen and (max-width: 430px) {
+            .midContainer {
+                padding: 5px;
+
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 165px 165px 165px;
+                gap: 5px;
+            }
         }
 
     </style>
@@ -47,10 +67,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
                         <p class="link">Общее</p>
@@ -63,26 +83,26 @@
                 <div class="midContent parallax-container">
                     <a class="midContentTextTop Content" href="./Cathedra1.html">Кафедра экономической теории и
                         предпринимательства</a>
-                    <img class="midContentImageTop Content" src="/Assets/1.jpg" width="300" height="180">
+                    <img class="midContentImageTop Content" src="/Assets/1.jpg">
                 </div>
                 <div class="midContent parallax-container">
                     <a class="midContentTextBottom Content" href="./Cathedra3.html">Кафедра управления
                         социально-экономическими системами</a>
-                     <img class="midContentImageBottom Content" src="/Assets/2.jpg" width="300" height="180">
+                     <img class="midContentImageBottom Content" src="/Assets/2.jpg">
                 </div>
                 <div class="midContent parallax-container">
                     <a class="midContentTextTop Content" href="./Cathedra5.html">Кафедра экономики</a>
-                     <img class="midContentImageTop Content" src="/Assets/3.jpg" width="300" height="180">
+                     <img class="midContentImageTop Content" src="/Assets/3.jpg">
                 </div>
                 <div class="midContent parallax-container">
                     <a class="midContentTextBottom Content" href="./Cathedra4.html">Кафедра государственной службы и
                         управления персоналом</a>
-                     <img class="midContentImageBottom Content" src="/Assets/4.jpg" width="300" height="180">
+                     <img class="midContentImageBottom Content" src="/Assets/4.jpg">
                 </div>
                 <div class="midContent parallax-container">
                     <a class="midContentTextTop Content" href="./Cathedra2.html">Кафедра финансов и цифровой
                         экономики</a>
-                     <img class="midContentImageTop Content" src="/Assets/5.jpg" width="300" height="180">
+                     <img class="midContentImageTop Content" src="/Assets/5.jpg">
                 </div>
 
             </div>
@@ -98,6 +118,7 @@
     </div>
 
     <script>
+        if(window.matchMedia("(min-width: 1000px)").matches) {
         document.addEventListener(`DOMContentLoaded`, () => {
             // Get the value of `devicePixelRatio`
             const dpr = window.devicePixelRatio;
@@ -126,20 +147,7 @@
             // Add the style element to the document
             document.head.appendChild(styleElement);
         });
-
-        // get the root element
-        const root = document.documentElement;
-
-        document.addEventListener('mousemove', (event) => {
-            // calculate transformation values
-            const smoothMove = 0.01;
-            const rotateX = (event.clientY - window.innerHeight / 2) * smoothMove;
-            const rotateY = (event.clientX - window.innerWidth / 2) * -smoothMove / 2;
-
-            // set CSS variables
-            root.style.setProperty('--rotate-x', `${rotateX}deg`);
-            root.style.setProperty('--rotate-y', `${rotateY}deg`);
-        });
+    }
     </script>
 </body>
 

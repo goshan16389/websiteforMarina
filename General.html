@@ -60,6 +60,74 @@
             
         }
 
+        @media only screen and (max-width: 600px) { 
+            .midContainer {
+                grid-row: 2;
+                width: 100%;
+                padding: 5px;
+
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto auto;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: auto;
+                grid-row: auto;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                Padding: 5px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midRightTop {
+                grid-column: auto;
+                grid-row: auto;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+            }
+
+            .midDouble {
+                grid-column: auto;
+                grid-row: auto;
+
+                Padding: 5px;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+                
+            }
+
+            table.midDouble {
+                padding: 0;
+            }
+        } 
+
+        @media only screen and (max-width: 350px) { 
+            table.midDouble tbody tr td , table.midDouble tbody tr th {
+                padding: 1px;
+                font-size: 13px;
+            }
+        }
+
     </style>
 </head>
 
@@ -90,10 +158,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement selected" href="./General.html">
                         <p class="link">Общее</p>
@@ -221,6 +289,7 @@
     </div>
 
     <script>
+        if(window.matchMedia("(min-width: 1000px)").matches) {
         document.addEventListener(`DOMContentLoaded`, () => {
             // Get the value of `devicePixelRatio`
             const dpr = window.devicePixelRatio;
@@ -249,6 +318,7 @@
             // Add the style element to the document
             document.head.appendChild(styleElement);
         });
+    }
     </script>
 </body>
 

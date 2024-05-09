@@ -7,7 +7,6 @@
     <title>Кафедра экономики</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-
         .midContainer {
             grid-row: 2;
             width: 100%;
@@ -18,6 +17,14 @@
             gap: 25px;
         }
 
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                padding: 5px;
+                gap: 5px;
+                grid-template-columns: 100%;
+
+            }
+        }
     </style>
 </head>
 
@@ -47,10 +54,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
                         <p class="link">Общее</p>
@@ -69,92 +76,112 @@
                 <div class="midListContainer">
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Кутяшова Елена Васильевна</p>
-                        <p class="midListItemText">🌟 зав. кафедрой</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📧 9128504681@mail.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Кутяшова Елена Васильевна</p>
+                            <p class="midListItemText">🌟 зав. кафедрой</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📧 9128504681@mail.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Аношин Анатолий Васильевич</p>
-                        <p class="midListItemText">🌟 директор ИЭиУ</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 416 / 401 каб.</p>
-                        <p class="midListItemText">📧 rime@inem.uni.udm.ru, 4062@inem.uni.udm.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Аношин Анатолий Васильевич</p>
+                            <p class="midListItemText">🌟 директор ИЭиУ</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 416 / 401 каб.</p>
+                            <p class="midListItemText">📧 rime@inem.uni.udm.ru, 4062@inem.uni.udm.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Галямова Эльмира Фаритовна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📧 galiamova@mail.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Галямова Эльмира Фаритовна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📧 galiamova@mail.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Данилин Олег Евгеньевич</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Данилин Олег Евгеньевич</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Злобина Екатерина Юрьевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📧 k-churakova@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Злобина Екатерина Юрьевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📧 k-churakova@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Иванов Валерий Александрович</p>
-                        <p class="midListItemText">💼 к.т.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📧 aae@inem.uni.udm.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Иванов Валерий Александрович</p>
+                            <p class="midListItemText">💼 к.т.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📧 aae@inem.uni.udm.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Котлячкова Наталья Владимировна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">+79225050156@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Котлячкова Наталья Владимировна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">+79225050156@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Скобелева Ольга Александровна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">📧 osfort@izh.com</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Скобелева Ольга Александровна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">📧 osfort@izh.com</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Сметанина Татьяна Петровна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
-                        <p class="midListItemText">smetanina.tatiana@gmail.com</p>
-                        <p class="midListItemText">📞 8(3412)916-061</p>
+                        <div>
+                            <p class="midListItemText">Сметанина Татьяна Петровна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 401 каб.</p>
+                            <p class="midListItemText">smetanina.tatiana@gmail.com</p>
+                            <p class="midListItemText">📞 8(3412)916-061</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Ясавиева Римма Мухаматнуровна</p>
-                        <p class="midListItemText">💼 специалист по УМР 1 категории</p>
+                        <div>
+                            <p class="midListItemText">Ясавиева Римма Мухаматнуровна</p>
+                            <p class="midListItemText">💼 специалист по УМР 1 категории</p>
+                        </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -170,24 +197,25 @@
     </div>
 
     <script>
-        document.addEventListener(`DOMContentLoaded`, () => {
-            // Get the value of `devicePixelRatio`
-            const dpr = window.devicePixelRatio;
-            // If the value is 1, return early
-            if (dpr === 1) {
-                return;
-            }
-            // Define the base zoom
-            const baseZoom = 1;
+        if (window.matchMedia("(min-width: 1000px)").matches) {
+            document.addEventListener(`DOMContentLoaded`, () => {
+                // Get the value of `devicePixelRatio`
+                const dpr = window.devicePixelRatio;
+                // If the value is 1, return early
+                if (dpr === 1) {
+                    return;
+                }
+                // Define the base zoom
+                const baseZoom = 1;
 
-            // Calculate the zoom scaling
-            const zoom = baseZoom / dpr;
+                // Calculate the zoom scaling
+                const zoom = baseZoom / dpr;
 
-            // Create a style element
-            const styleElement = document.createElement(`style`);
+                // Create a style element
+                const styleElement = document.createElement(`style`);
 
-            // Add CSS rule to the style element
-            styleElement.innerHTML = `
+                // Add CSS rule to the style element
+                styleElement.innerHTML = `
                 @media (-webkit-device-pixel-ratio: ${dpr}) {
                 :root {
                 zoom: ${zoom};
@@ -195,9 +223,10 @@
                 }
                 `;
 
-            // Add the style element to the document
-            document.head.appendChild(styleElement);
-        });
+                // Add the style element to the document
+                document.head.appendChild(styleElement);
+            });
+        }
     </script>
 </body>
 

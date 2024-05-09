@@ -7,7 +7,6 @@
     <title>Кафедра финансов и цифровой экономики</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-
         .midContainer {
             grid-row: 2;
             width: 100%;
@@ -18,6 +17,14 @@
             gap: 25px;
         }
 
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                padding: 5px;
+                gap: 5px;
+                grid-template-columns: 100%;
+
+            }
+        }
     </style>
 </head>
 
@@ -47,10 +54,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
                         <p class="link">Общее</p>
@@ -69,83 +76,101 @@
                 <div class="midListContainer">
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Суетин Александр Николаевич</p>
-                        <p class="midListItemText">🌟 зав. кафедрой</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
-                        <p class="midListItemText">ANSUETIN.udgu@gmail.com</p>
-                        <p class="midListItemText">📞 8(3412)916-058</p>
+                        <div>
+                            <p class="midListItemText">Суетин Александр Николаевич</p>
+                            <p class="midListItemText">🌟 зав. кафедрой</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                            <p class="midListItemText">ANSUETIN.udgu@gmail.com</p>
+                            <p class="midListItemText">📞 8(3412)916-058</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Борнякова Елена Васильевна</p>
-                        <p class="midListItemText">💼 старший преподаватель</p>
-                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
-                        <p class="midListItemText">📧 evb2006@mail.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-058</p>
+                        <div>
+                            <p class="midListItemText">Борнякова Елена Васильевна</p>
+                            <p class="midListItemText">💼 старший преподаватель</p>
+                            <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                            <p class="midListItemText">📧 evb2006@mail.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-058</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Костенкова Вера Григорьевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
-                        <p class="midListItemText">📧 vgk971@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-058</p>
+                        <div>
+                            <p class="midListItemText">Костенкова Вера Григорьевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                            <p class="midListItemText">📧 vgk971@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-058</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Слесаренко Галина Витальевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
-                        <p class="midListItemText">📧 sgv06@list.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-058</p>
+                        <div>
+                            <p class="midListItemText">Слесаренко Галина Витальевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                            <p class="midListItemText">📧 sgv06@list.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-058</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Тимирханова Люция Мукатдамовна</p>
-                        <p class="midListItemText">💼 старший преподаватель</p>
-                        <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
-                        <p class="midListItemText">📧 luciatm@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-203</p>
+                        <div>
+                            <p class="midListItemText">Тимирханова Люция Мукатдамовна</p>
+                            <p class="midListItemText">💼 старший преподаватель</p>
+                            <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
+                            <p class="midListItemText">📧 luciatm@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-203</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Федулова Светлана Федоровна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
-                        <p class="midListItemText">📧 fsffin@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-058</p>
+                        <div>
+                            <p class="midListItemText">Федулова Светлана Федоровна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 406 каб.</p>
+                            <p class="midListItemText">📧 fsffin@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-058</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
-                        <p class="midListItemText">ir.scherbackova@yandex.ru</p>
-                        <p class="midListItemText">📞 8(3412)916-203</p>
+                        <div>
+                            <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">🏢 4 корпус, 433 каб.</p>
+                            <p class="midListItemText">ir.scherbackova@yandex.ru</p>
+                            <p class="midListItemText">📞 8(3412)916-203</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Матвеева Инна Витальевна</p>
-                        <p class="midListItemText">💼 к.э.н., доцент</p>
-                        <p class="midListItemText">inna.matweewa@gmail.com</p>
+                        <div>
+                            <p class="midListItemText">Матвеева Инна Витальевна</p>
+                            <p class="midListItemText">💼 к.э.н., доцент</p>
+                            <p class="midListItemText">inna.matweewa@gmail.com</p>
+                        </div>
                     </div>
 
                     <div class="midListItem">
                         <img src="/Assets/person.svg" width="100px">
-                        <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
-                        <p class="midListItemText">💼 старший преподаватель</p>
-                        <p class="midListItemText">🏢 4 корпус, 415 каб.</p>
-                        <p class="midListItemText">📧 tga433@yandex.ru</p>
+                        <div>
+                            <p class="midListItemText">Щербакова Ирина Геннадьевна</p>
+                            <p class="midListItemText">💼 старший преподаватель</p>
+                            <p class="midListItemText">🏢 4 корпус, 415 каб.</p>
+                            <p class="midListItemText">📧 tga433@yandex.ru</p>
+                        </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -161,24 +186,25 @@
     </div>
 
     <script>
-        document.addEventListener(`DOMContentLoaded`, () => {
-            // Get the value of `devicePixelRatio`
-            const dpr = window.devicePixelRatio;
-            // If the value is 1, return early
-            if (dpr === 1) {
-                return;
-            }
-            // Define the base zoom
-            const baseZoom = 1;
+        if (window.matchMedia("(min-width: 1000px)").matches) {
+            document.addEventListener(`DOMContentLoaded`, () => {
+                // Get the value of `devicePixelRatio`
+                const dpr = window.devicePixelRatio;
+                // If the value is 1, return early
+                if (dpr === 1) {
+                    return;
+                }
+                // Define the base zoom
+                const baseZoom = 1;
 
-            // Calculate the zoom scaling
-            const zoom = baseZoom / dpr;
+                // Calculate the zoom scaling
+                const zoom = baseZoom / dpr;
 
-            // Create a style element
-            const styleElement = document.createElement(`style`);
+                // Create a style element
+                const styleElement = document.createElement(`style`);
 
-            // Add CSS rule to the style element
-            styleElement.innerHTML = `
+                // Add CSS rule to the style element
+                styleElement.innerHTML = `
                 @media (-webkit-device-pixel-ratio: ${dpr}) {
                 :root {
                 zoom: ${zoom};
@@ -186,9 +212,10 @@
                 }
                 `;
 
-            // Add the style element to the document
-            document.head.appendChild(styleElement);
-        });
+                // Add the style element to the document
+                document.head.appendChild(styleElement);
+            });
+        }
     </script>
 </body>
 

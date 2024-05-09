@@ -78,6 +78,119 @@
             position: relative;
             text-align: left;
         }
+
+        @media only screen and (max-width: 600px) {
+            .midContainer {
+                grid-row: 2;
+                width: 100%;
+                height: auto;
+                /* padding: 25px; */
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .swiper {
+                padding: 5px;
+            }
+
+            .midSliderContainer {
+                width: 100%;
+                height: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 375px auto 250px;
+                grid-auto-rows: max-content;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: 1;
+                grid-row: 2;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                Padding: 5px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midLeftBottom {
+                grid-column: 1;
+                grid-row: 3;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+                position:relative;
+                overflow:hidden;
+            }
+
+            .midRight {
+                grid-column: 1;
+                grid-row: 1;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                position: relative;
+                text-align: left;
+            }
+            
+            .midDescription {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            .midDescription p {
+                text-align: center;
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+            .midSliderContainer {
+                grid-template-rows: 350px auto 250px;
+            }
+
+        }
+
+        @media only screen and (max-width: 500px) {
+            .midSliderContainer {
+                grid-template-rows: 325px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .midSliderContainer {
+                grid-template-rows: 300px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .midSliderContainer {
+                grid-template-rows: 275px auto 250px;
+            }
+        }
+
+        @media only screen and (max-width: 350px) {
+            .midSliderContainer {
+                grid-template-rows: 250px auto 250px;
+            }
+        }
         
     </style>
 </head>
@@ -109,10 +222,10 @@
                         <p class="link">Кафедры</p>
                     </a>
                     <a class="topMenuElement" href="./Activities.html">
-                        <p class="link">Внеучебная деятельность</p>
+                        <p class="link">Клубы</p>
                     </a>
                     <a class="topMenuElement" href="./Ecosystem.html">
-                        <p class="link">Экосистема УдГУ</p>
+                        <p class="link">Сайты УдГУ</p>
                     </a>
                     <a class="topMenuElement" href="./General.html">
                         <p class="link">Общее</p>
@@ -396,6 +509,7 @@
     </div>
 
     <script>
+        if(window.matchMedia("(min-width: 1000px)").matches) {
         document.addEventListener(`DOMContentLoaded`, () => {
             // Get the value of `devicePixelRatio`
             const dpr = window.devicePixelRatio;
@@ -424,6 +538,7 @@
             // Add the style element to the document
             document.head.appendChild(styleElement);
         });
+    }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>

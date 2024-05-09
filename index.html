@@ -65,64 +65,95 @@
 
         @media only screen and (max-width: 600px) {
             .midContainer {
-            grid-row: 2;
-            padding: 5px;
+                grid-row: 2;
+                padding: 5px;
 
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 275px;
-            grid-auto-rows: max-content;
-            gap: 5px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 350px;
+                grid-auto-rows: max-content;
+                gap: 5px;
+            }
+
+            .midLeftTop {
+                grid-column: 1;
+                grid-row: 2;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+
+            }
+
+            .midLeftTop p, .midLeftBottom p, .midLeftBottom ul li {
+                font-size: 16px;
+                margin: 0 0 5px 0;
+            }
+
+            
+
+            .midLeftBottom {
+                grid-column: 1;
+                grid-row: 3;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                background-color: #dfe4ea;
+            }
+
+            .midRight {
+                grid-column: 1;
+                grid-row: 1;
+
+                border: 3px solid #a4b0be;
+                border-radius: 10px;
+
+                overflow: hidden;
+
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+
+                position: relative;
+                text-align: left;
+            }
+
         }
 
-        .midLeftTop {
-            grid-column: 1;
-            grid-row: 2;
-
-            border: 3px solid #a4b0be;
-            border-radius: 10px;
-
-
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
-
-            background-color: #dfe4ea;
-
+        @media only screen and (max-width: 550px) {
+            .midContainer {
+                grid-template-rows: 325px;
+            }
         }
 
-        .midLeftTop p, .midLeftBottom p, .midLeftBottom ul li {
-            font-size: 16px;
-            margin: 0 0 5px 0;
+        @media only screen and (max-width: 500px) {
+            .midContainer {
+                grid-template-rows: 300px;
+            }
         }
 
-        
-
-        .midLeftBottom {
-            grid-column: 1;
-            grid-row: 3;
-
-            border: 3px solid #a4b0be;
-            border-radius: 10px;
-
-
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
-
-            background-color: #dfe4ea;
+        @media only screen and (max-width: 475px) {
+            .midContainer {
+                grid-template-rows: 275px;
+            }
         }
 
-        .midRight {
-            grid-column: 1;
-            grid-row: 1;
-
-            border: 3px solid #a4b0be;
-            border-radius: 10px;
-
-            overflow: hidden;
-
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
-
-            position: relative;
-            text-align: left;
+        @media only screen and (max-width: 400px) {
+            .midContainer {
+                grid-template-rows: 250px;
+            }
         }
+
+        @media only screen and (max-width: 360px) {
+            .midContainer {
+                grid-template-rows: 225px;
+            }
         }
 
     </style>

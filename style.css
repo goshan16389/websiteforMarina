@@ -226,7 +226,7 @@ button:hover {
 table {
     border-collapse: separate;
     border-spacing: 0;
-    min-width: 350px;
+    min-width: 280px;
 
     text-align: center;
 }
@@ -335,12 +335,16 @@ table tr:last-child td:last-child {
 
 .midContentImageTop {
     grid-row: 4 / span 2;
+    width: 100%;
+    height: 100%;
 
     transition: 0.5s;
 }
 
 .midContentImageBottom {
     grid-row: 5 / span 2;
+    width: 100%;
+    height: 100%;
 
     transition: 0.5s;
 }
@@ -423,7 +427,12 @@ table tr:last-child td:last-child {
 
 }
 
+.midListItem div p {
+    margin: 3px 0;
+}
+
 .midListItemText {
+    display: block;
     width: 100%;
     margin: 3px;
     text-align: center;
@@ -466,6 +475,7 @@ table tr:last-child td:last-child {
 }
 
 @media only screen and (max-width: 600px) {
+    
     * {
         font-size: 14px;
     }
@@ -484,7 +494,7 @@ table tr:last-child td:last-child {
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 0.8fr 0.05fr 0.05fr;
+        grid-template-rows: 0.1fr 0.9fr auto 20px 20px;
     }
     .topContainer {
         display: grid;
@@ -505,9 +515,10 @@ table tr:last-child td:last-child {
 
     .topMenu {
         display: grid;
-        grid-template-columns: 18% 18% 18% 18% 18%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 100%;
         column-gap: 2.5%;
+        transition: 0.5s;
 
         padding: 0 5px;
     }
@@ -519,18 +530,208 @@ table tr:last-child td:last-child {
         background-color: lightgrey;
     }
 
+    .topMenuElement.selected {
+        background-color: #a4b0be;
+    }
+
     .topMenuElement:last-child {
         border-right: none;
     }
 
     .link {
-        font-size: 12px;
+        font-size: 14px;
+        transition: 0.5s;
     }
 
     .bottomContainer {
-        grid-row: 4;
+        grid-row: 4 / span 5;
     }
 
+    .midContent {
+        grid-template-rows: 50px 150px;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        grid-column: span 2;
+    }
+
+    .midContent:last-of-type {
+        grid-column: 2 / span 2;
+    }
+
+    .midContentTextTop {
+        grid-row: 1;
+        
+    }
+
+    .midContentTextBottom {
+        grid-row: 1;
+    }
+
+    .midContentImageTop {
+        grid-row: 2;
+    }
+
+    .midContentImageBottom {
+        grid-row: 2;
+    }
     
+    .Content {
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+    }
+
+    .cathedraLink {
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .midHeaderText {
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+        text-align: center;
+        width: 100%;
+    }
+
+    .midListContainer {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-auto-rows: max-content;
+        
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    .midListItem {
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        width: 100%;
+        gap: 5px;
+
+    }
+
+    .midListContainerActivities {
+        grid-row: 2;
+        
+    
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-auto-rows: max-content;
+        
+        row-gap: 5px;
+    
+        justify-content: none;
+    }
+
+    .midListItemText {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+    
+        border-radius: 10px;
+    
+        background-color: #f1f2f6;
+    }
+
+    .over, .overmini, .overalot {
+        font-size: 14px;
+    }
 
 }
+
+@media only screen and (max-width: 545px) { 
+    .midHeader {
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        justify-content: none;
+        align-items: none;
+
+        gap: 5px;
+    
+    }
+
+    .midHeaderText {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
+    .cathedraLink {
+        width: fit-content;
+        justify-self: center;
+    }
+}
+
+@media only screen and (max-width: 480px) { 
+    .midContentTextTop, .midContentTextBottom {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 430px) { 
+    .topContainer {
+        grid-template-rows: 40px 1fr;
+
+    }
+    .topInfo {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .midContent {
+        grid-template-rows: 50px 110px;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        grid-column: span 2;
+    }
+
+    .midListItemText {
+        font-size: 18px;
+    }
+
+} 
+
+@media only screen and (max-width: 415px) { 
+    .topContainer {
+        grid-template-rows: 25px 1fr;
+
+    }
+    .topInfo {
+        grid-template-columns: 25px 1fr;
+    }
+
+    .midContentTextTop, .midContentTextBottom {
+        font-size: 11px;
+    }
+
+} 
+
+@media only screen and (max-width: 400px) { 
+    .topInfoText p {
+        font-size: 12px;
+    }
+    .bottomElement {
+        grid-column: 1 / span 3;
+    }
+
+} 
+
+@media only screen and (max-width: 375px) { 
+    .midListItemText {
+        font-size: 16px;
+    }
+
+} 
+
+@media only screen and (max-width: 350px) { 
+    .topInfoText p {
+        font-size: 11px;
+    }
+
+    .midListItemText {
+        font-size: 14px;
+    }
+
+} 
+
