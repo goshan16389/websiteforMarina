@@ -7,6 +7,7 @@
     <title>Экосистема УдГУ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.jpg">
 
     <style>
 
@@ -383,38 +384,7 @@
         </div>
     </div>
 
-    <script>
-        if(window.matchMedia("(min-width: 1000px)").matches) {
-        document.addEventListener(`DOMContentLoaded`, () => {
-            // Get the value of `devicePixelRatio`
-            const dpr = window.devicePixelRatio;
-            // If the value is 1, return early
-            if (dpr === 1) {
-                return;
-            }
-            // Define the base zoom
-            const baseZoom = 1;
-
-            // Calculate the zoom scaling
-            const zoom = baseZoom / dpr;
-
-            // Create a style element
-            const styleElement = document.createElement(`style`);
-
-            // Add CSS rule to the style element
-            styleElement.innerHTML = `
-                @media (-webkit-device-pixel-ratio: ${dpr}) {
-                :root {
-                zoom: ${zoom};
-                }
-                }
-                `;
-
-            // Add the style element to the document
-            document.head.appendChild(styleElement);
-        });
-    }
-    </script>
+    <script src="ScalingNormalize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
